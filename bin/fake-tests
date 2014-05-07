@@ -1,0 +1,7 @@
+#!/usr/bin/ruby
+
+$LOAD_PATH << File.dirname(__FILE__) + "/../lib" if $0 == __FILE__
+
+require 'fake-tests'
+
+FakeTests.new.run!
