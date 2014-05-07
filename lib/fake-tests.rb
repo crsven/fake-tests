@@ -1,13 +1,36 @@
 class FakeTests
-  def initialize
+  def initialize(options={})
     @running = true
+    @runtime = parse_to_seconds(options[:time]) if options[:time]
   end
 
   def run!
+    @start_time = Time.now
     output_header
     while @running do
       print '.'
       sleep(1)
+      check_time if @runtime
+    end
+  end
+
+  private
+
+  def stop
+    @running = false
+  end
+
+  def parse_to_seconds(time)
+    time*60
+  end
+
+  def elapsed_time
+    Time.now - @start_time
+  end
+
+  def check_time
+    if elapsed_time > @runtime
+      stop
     end
   end
 

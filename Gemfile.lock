@@ -2,10 +2,12 @@ PATH
   remote: .
   specs:
     fake-tests (0.0.1)
+      trollop
 
 GEM
   remote: http://rubygems.org/
   specs:
+    trollop (2.0)
 
 PLATFORMS
   ruby

@@ -2,6 +2,11 @@
 
 $LOAD_PATH << File.dirname(__FILE__) + "/../lib" if $0 == __FILE__
 
+require 'trollop'
 require 'fake-tests'
 
-FakeTests.new.run!
+opts = Trollop::options do
+  opt :time, "How long should the specs run? (in minutes)", type: :float
+end
+
+FakeTests.new(opts).run!
