@@ -1,6 +1,6 @@
 ##fake-tests
 
-Inspired by (Corporate Avoidance)[http://www.corporateavoidance.com/], fake-tests outputs fake (RSpec)[https://www.relishapp.com/rspec/] test results.
+Inspired by [Corporate Avoidance](http://www.corporateavoidance.com/), fake-tests outputs fake [RSpec](https://www.relishapp.com/rspec/) test results.
 
 ###Usage
 ```
